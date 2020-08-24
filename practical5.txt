@@ -1,0 +1,109 @@
+#1
+
+tuplex = (4, 6, 2, 8, 3, 1) 
+print(tuplex)
+tuplex = tuplex + (9,)
+print(tuplex)
+
+#Output:-
+(4, 6, 2, 8, 3, 1)
+(4, 6, 2, 8, 3, 1, 9)
+
+==============================================================================================================================
+#2
+
+tuplex = 2, 4, 5, 6, 2, 3, 4, 4, 7 
+print(tuplex)
+count = tuplex.count(4)
+print(count)
+
+#Output:-
+(2, 4, 5, 6, 2, 3, 4, 4, 7)
+3
+
+==============================================================================================================================
+#3
+
+tuplex = (1,2,3,4,6,7,8,9,10)
+print(5 in tuplex)
+
+Output:-
+False
+
+==============================================================================================================================
+#4
+
+
+listx = [5, 10, 7, 4, 15, 3]
+print(listx)
+tuplex = tuple(listx)
+print(tuplex)
+
+Output:-
+[5, 10, 7, 4, 15, 3]
+(5, 10, 7, 4, 15, 3)
+==============================================================================================================================
+#5
+
+tuple1 = ("Hello",)
+print(tuple1)
+
+Output:-
+('Hello',)
+
+=============================================================================================================================
+#6
+
+#6
+t1=(10,"python",[10,3,4,5,90],(1,2,3,4,5))
+print(t1[2][0])
+t1[2][1]=20
+print(t1)
+print(t1[3][3])
+
+#Output
+10
+(10, 'python', [10, 20, 4, 5, 90], (1, 2, 3, 4, 5))
+4
+==============================================================================================================================
+Post Laboratory Questions:-
+
+1.Explain tuple with proper example.
+->A tuple is similar to List except that the objects in tuple are immutable which means
+  we cannot change the elements of a tuple once assigned.
+  Ex.:-tuplex=(1,2,3,4,5)
+ 
+2.List out all the Methods Tuples
+->count(), index().
+
+3.Which are the Tuple Functions?
+->tuple().
+
+4.Write down at least Five differences between List and Tuple
+->             List                                 Tuple
+    1. List is mutable                      Tuple are immutable
+
+    2.Implication of iterations             Implication of iteration is 
+      is time consuming                     comparatively Faster.
+
+    3.The list better for performing        Tuple data type is approprite        
+      operations,such as insertion          for accessing the elements.
+      and deletion.
+ 
+    4.Lists consume more memory.            Tuple consume less memory
+                                            as copmared to the list.
+
+    5.List have several built-in            Tuple does no have must built
+      methods.                              in methods.
+
+5.Is it possible to modify tuple? If No then write down the reason for it.
+->Once a tuple is created, you cannot change its values. Tuples are unchangeable,
+  or immutable as it also is called.
+
+6.How to create nested Tuple? Write down code for it. 
+->my_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
+  print(my_tuple)
+
+7.What is the use of Count and Index method in Tuple? 
+->count():-returns count of the element in the tuple
+  index():-returns the index of the element in the tuple

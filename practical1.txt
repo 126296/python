@@ -1,0 +1,239 @@
+#1
+print("hello world")
+
+#output
+hello world
+===============================================================
+#2
+#intialize number and perform addition
+
+a=2
+b=3
+c=a+b
+print(c)
+
+#or as a number input and perform addition
+
+a=int(input("enter number1="))
+b=int(input("enter number2="))
+
+print(a+b)
+
+#output
+5
+enter number1=4
+enter number2=5
+9
+===============================================================
+#3
+#average of two number
+
+a=int(input("enter number1="))
+b=int(input("enter number2="))
+print(a+b)
+d=(a+b)/2
+print(d)
+
+#output
+enter number1=2
+enter number2=3
+5
+2.5
+===============================================================#4
+
+#odd even number
+
+a=int(input("enter number:"))
+
+if(a % 2==0):
+    print(str(a) + "\t" + "is even number")
+else:
+    print(str(a) + "\t" + "is odd number")
+
+#output
+enter number:5
+5	is odd number
+
+===============================================================
+#5
+
+#Exchange two number without using a temporary variable
+
+x=int(input("enter number1="))
+y=int(input("enter number2="))
+
+x=x+y
+y=x-y
+x=x-y
+
+print("x is =" + str(x))
+print("y is =" + str(y))
+
+#output
+enter number1=4
+enter number2=5
+x is =5
+y is =4
+===============================================================
+#6
+
+#to convert kilogram into gram
+
+a=int(input("enter value for kilogram="))
+gram=1000
+gram=a*gram
+
+print(gram)
+
+#output
+enter value for kilogram=300
+300000
+===============================================================
+#7
+
+#To find the area of the rectangle
+
+l=int(input("enter length:"))
+b=int(input("enter breath:"))
+
+A=l*b
+
+print("Area is=" + str(A))
+
+#output
+enter length:600
+enter breath:700
+Area is=420000
+===============================================================
+#8
+
+#find simple interest
+
+p=int(input("enter principle amount="))
+
+t=int(input("enter time="))
+
+r=int(input("enter rate="))
+
+SI=(p*r*t)/100
+
+print("your simple interest is:" + str(SI))
+
+#output
+enter principle amount=300
+enter time=60
+enter rate=700
+your simple interest is:126000.0
+===============================================================
+#9
+
+#Find profit and loss
+
+cost_price=float(input("enter cost price="))
+sell_price=float(input("enter sell price="))
+
+if(cost_price>sell_price):
+    amount=cost_price-sell_price
+    print("loss is:"+str(amount))
+elif(sell_price>cost_price):
+    amount=sell_price-cost_price
+    print("profit is:" + str(amount))
+
+#output
+enter cost price=300
+enter sell price=24
+loss is:276.0
+===============================================================
+#10
+
+#Accept two numbers and check if thay are equal
+
+n1=int(input("enter number1="))
+n2=int(input("enter number2="))
+
+if(n1==n2):
+    print("number is equaal")
+else:
+    print("number is not equal")
+
+#output
+enter number1=5
+enter number2=9
+number is not equal
+===============================================================
+#11
+#number is positive nagative or zero
+
+n1=int(input("enter number="))
+
+if(n1>0):
+    print("number is positive")
+elif(n1<0):
+    print("number is nagative")
+else:
+    print("number is zero")
+    
+#output
+enter number=-6
+number is nagative
+==============================================================
+#12
+
+#to find the largest from given two number
+
+n1=int(input("enter number1="))
+n2=int(input("enter number2="))
+
+if(n1>n2):
+    print("n1 is largest")
+else:
+    print("n2 is largest")
+
+#output
+enter number1=3
+enter number2=4
+n2 is largest
+===============================================================
+#13
+
+#to find the largest from given three number
+
+n1=int(input("enter number1:"))
+n2=int(input("enter number2:"))
+n3=int(input("enter number3:"))
+
+
+if(n1>n2 and n1>n3):
+    print("n1 is largest")
+elif(n2>n1 and n2>n3 ):
+    print("n2 is largest")
+else:
+    print("n3 is largest")
+
+#output
+enter number1:9
+enter number2:6
+enter number3:7
+n1 is largest
+==============================================================================================================================
+Post Laboratory Questions:-
+
+1.What is Python?
+->Python is an interpreted, high-level, general-purpose programming language.
+
+2.What is difference between * and ** parameter?
+->single * is multiply operator and double ** is exponential power operator.
+
+3.Which are data types in python?
+->str, int, float, complex, list, tuple, range, dict, set, frozenset, bool,
+  bytes, bytearray, memoryview
+
+4.What is the output of the following code?
+  print(1, 2, 3, 4, sep='*')
+->1*2*3*4
+
+5.What is block?
+->A block is a piece of python program text that is executed as a unit.
+
+6.which operator is used for slicing?
+->slicing operator,that is [] operator used for slicing.

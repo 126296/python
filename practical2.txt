@@ -1,0 +1,232 @@
+#1
+
+#generate students mark sheet
+
+subjects=[]
+for num in range(5):
+    x=input("enter subject name=")
+    subjects.append(x)
+    
+marks=[]
+for num in range(5):
+    y=int(input("enter marks="))
+    if(y>=0):
+        print("vallid")
+        marks.append(y)
+    else:
+        print("not vallid")
+    
+for i,j in zip(subjects,marks):
+        print(i,':',j)
+       
+
+#output
+enter subject name=java
+enter subject name=c
+enter subject name=c++
+enter subject name=.net
+enter subject name=python
+enter marks=30
+vallid
+enter marks=90
+vallid
+enter marks=80
+vallid
+enter marks=100
+vallid
+enter marks=40
+vallid
+java : 30
+c : 90
+c++ : 80
+.net : 100
+python : 40
+===============================================================
+#2
+
+year=int(input("enter year="))
+if(year%4)==0:
+    if(year%100==0):
+        if(year%400==0):
+            print("{0}year is leap year".format(year))
+        else:
+            print("{0}year is not leap year".format(year))
+    else:
+        print("{0}year is leap year".format(year))
+else:
+    print("{0}year is not a leap year".format(year))
+         
+        
+#output
+enter year=2009
+2009year is not a leap year
+===============================================================
+#3
+
+number=int(input("enter number="))
+fact=1
+for i in range(1,number+1):
+    fact=fact*i
+print(fact)
+
+#output
+enter number=5
+120
+===============================================================
+#4
+n=int(input("enter number="))
+a=n
+b=0
+while(n>0):
+    c=n%10
+    b=(b*10)+c
+    n=n//10
+if(a==b):
+    print("the number is palindrome")
+else:
+    print("the number is not palindrome")
+
+
+#output
+enter number=121
+the number is palindrome
+
+===============================================================
+#5
+n=int(input("enter any number="))
+reverse=0
+while(n>0):
+    reminder = n%10
+    reverse = (reverse*10)+reminder
+    n=n//10
+
+print("\n reverse number is:%d" %reverse)
+     
+#output
+enter any number=123456
+
+ reverse number is:654321
+===============================================================
+#6
+n=int(input("enter number="))
+
+a=0
+b=1
+sum=0
+count=1
+
+print("febonaci serice is:",end="")
+while(count<=n):
+    print(sum,end="")
+    count=count+1
+    a=b
+    b=sum
+    sum=a+b
+
+    
+#output
+enter number=10
+febonaci serice is:0112358132134
+===============================================================
+#7
+
+num=int(input("enter number="))
+sum=0
+a=num
+          
+while a>0:
+    b=a%10
+    sum=sum+b**3
+    a //=10
+    
+
+if num!=sum:
+    print(num,"number is not armstrong number")
+else:
+    print(num,"number is  armstrong")
+
+#output
+enter number=33
+33 number is not armstrong number
+===============================================================
+#8
+
+n=int(input("enter number="))
+j=10
+for i in range(1,j+1):
+    print(n,'x',i,'=',n*i)
+
+#output
+enter number=5
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+
+===============================================================
+#9
+n=int(input("enter number="))
+sum=0
+for i in range(1,n+1,2):
+    sum=sum+i
+    
+    print(sum)
+#output
+enter number=20
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+===============================================================
+#10
+
+l1=[]
+for x in range(1,100):
+    if(x%7==0) and (x%5==0):
+        l1.append(str(x))
+print(l1)
+
+#output
+['35', '70']
+===============================================================
+===============================================================
+Post Laboratory Questions:-
+
+1.What does \ (backslash) character indicates?
+->In Python strings, the backslash "\" is a special character, also called
+  the "escape" character. It is used in representing certain whitespace characters.
+
+2.Give example of if control flow statement.
+->x = -15
+  if x == 0:
+	print(x, "is zero")
+  elif x > 0:
+	print(x, "is positive")
+
+3.Give example of For loop statement.
+->sum = 0
+  for val in range(1, 6):
+	sum = sum + val
+  print(sum)
+
+4.What is used to define a block of code (body of loop, function
+  etc.) in Python?
+->Indentation can be ignored in line continuation,
+  but it's always a good idea to indent.It makes the code more readable.
+
+5.What is used to take input from the user in Python?
+->It’s very easy to take the user input in Python from the input() function.
+  It’s mostly used to provide choice of operation to the user and then alter
+  the flow of the program accordingly.

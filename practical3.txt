@@ -1,0 +1,318 @@
+#pattern1
+
+rows=5
+
+for i in range(0,rows):
+    for j in range(0,i+1):
+        print("*",end='')
+    print("\r")
+
+#output:-
+***************==============================================================================================================================
+#pattern2
+
+n=5
+
+k=2*n-2
+for i in range(0,n):
+    for j in range(0,k):
+        print(end=" ")
+    k=k-2
+    for j in range(0,i+1):
+        print('*',end=" ")
+    print(" ")
+
+#Output:-
+================== RESTART: C:\Users\Hp\Desktop\pattern2.py ==================
+        *  
+      * *  
+    * * *  
+  * * * *  
+* * * * *  
+==============================================================================================================================
+#pattern3
+
+
+n=5
+k=n-1
+
+for i in range(0,n):
+    for j in range(0,k):
+        print(end=" ")
+    k=k-1
+    for j in range(0,i+1):
+        print("*",end=" ")
+    print("")
+
+#output:-
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+==============================================================================================================================
+#pattern4
+
+n=6
+k=0
+for i in range(1,n):
+    for j in range(0,k+1):
+        print("*",end=" ")
+    k=k+2
+    print(" ")
+
+#Output:-
+*  
+* * *  
+* * * * *  
+* * * * * * *  
+* * * * * * * * *  
+=============================================================================================================================
+#pattern5
+
+n=int(input("Enter Number = "))
+
+for i in range(1,n+1):
+    for j in range(n,i,-1):
+        print(" ",end="")
+    for k in range(0,i):
+        if(i%2==0):
+            print("@ ",end="")
+        else:
+            print("$ ",end="")
+    print()
+
+#Output:-
+Enter Number = 5
+    $ 
+   @ @ 
+  $ $ $ 
+ @ @ @ @ 
+$ $ $ $ $ 
+============================================================================================================================
+#pattern6
+
+n=int(input("Enter Number = "))
+for i in range(n,-(n+1),-1):
+    for j in range(n,abs(i)-1,-1):
+        print("*",end="")
+    print()
+
+Output:-
+Enter Number = 5
+*
+**
+***
+****
+*****
+******
+*****
+****
+***
+**
+*
+======================================================================================================================================
+#pattern7
+
+n=int(input("Enter Number = "))
+px=n//2+1
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if(j==px or j==n-px+1):
+            print("*",end="")
+        else:
+            print(" ",end="")
+    if(i<=n/2):
+        px-=1
+    else:
+        px+=1
+    print()
+
+Output:-
+Enter Number = 5
+  *  
+ * * 
+*   *
+ * * 
+  * 
+======================================================================================================================================
+#pattern8
+
+n=int(input("Enter Number = "))
+
+for i in range(1,n+1):
+    for j in range(n,i,-1):
+        print(" ",end="")
+    for k in range(0,i):
+        print("10",end="")
+    print()
+
+Output:-
+Enter Number = 5
+    10
+   1010
+  101010
+ 10101010
+1010101010
+===================================================================================================================================
+#pattern9
+
+n=int(input("Enter Number (65 or above)= "))
+for i in range(65,n+1):
+    for j in range(65,i+1):
+        print(chr(i),end="")
+    print()
+
+Output:-
+A
+BB
+CCC
+DDDD
+EEEEE
+======================================================================================================================
+#pattern10
+
+n=int(input("Enter Number = "))
+
+for i in range(1,n+1):
+    for j in range(n+1,i,-1):
+        print("*",end="")
+    print()
+
+Output:-
+Enter Number = 5
+*****
+****
+***
+**
+*
+=========================================================================================================================
+#pattern11
+n=int(input("Enter Number = "))
+
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(j,end="")
+    print()
+
+Output:-
+Enter Number = 5
+1
+12
+123
+1234
+12345
+==========================================================================================================================
+#pattern12
+
+n=int(input("Enter Number = "))
+
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(i,end="")
+    print()
+
+Output:-
+Enter Number = 5
+1
+22
+333
+4444
+55555
+=============================================================================================================================
+#pattern13
+
+def pattern(n):
+    temp=1
+    for i in range(1,n+1):
+        temp1=temp
+        for j in range(1,i+1):
+            print(temp1,end="")
+            temp1=temp1-1
+        print()
+        temp=temp+1
+        
+n=int(input("Enter Number:"))
+pattern(n)
+
+#Output
+================= RESTART: C:/Users/Hp/Desktop/pattern13.py =================
+Enter Number:5
+1
+21
+321
+4321
+54321
+
+=================================================================================================================================
+#pattern14
+
+n=int(input("Enter Number = "))
+inc=1
+
+for i in range(1,n+1):
+    for j in range(n-1,i,-1):
+        print(" ",end="")
+    for k in range(1,inc+1):
+        print(abs(k-i),end="")
+    inc+=2
+    print()
+
+Output:-
+   0
+  101
+ 21012
+3210123
+432101234
+====================================================================================================================
+#pattern15
+
+n=int(input("Enter Number = "))
+
+asciiNumber=65
+m=(2*n)-2
+
+for i in range(0,n+1):
+    for j in range(0,m):
+        print(end=" ")
+    m=m-1
+    for j in range(0,i+1):
+        character=chr(asciiNumber)
+        print(character,end=' ')
+        asciiNumber+=1
+    print(" ")
+
+Output:-
+Enter Number = 5
+        A  
+       B C  
+      D E F  
+     G H I J  
+    K L M N O  
+   P Q R S T U      
+
+
+==============================================================================================================================
+Post Laboratory Qyestions:-
+
+1.What is Range function?
+->The range() function returns a sequence of numbers, starting from 0 by default,
+  and increments by 1 (by default), and stops before a specified number.
+
+2.Draw a Flowchart of for Loop.
+->step-1 start
+  step-2 n=0
+  stem-3 for i in range(n,n+1)
+  step-4 print "looping"
+  step-5 end
+
+3.Explain operator’s precedence in Python.
+->multiplication and division have a higher precedence than addition and subtraction.
+  Precedence rules can be overridden by explicit parentheses.
+
+4.Differentiate for loop and while loop.
+->The 'for' loop used only when we already knew the number of iterations.
+  The 'while' loop used only when the number of iteration are not exactly known.
+        
+
+

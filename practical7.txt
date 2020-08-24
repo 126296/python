@@ -1,0 +1,134 @@
+#1
+
+n=int(input("enter number="))
+dict={}
+for i in range(1,n+1):
+    dict[i]=i*i
+print(dict)
+
+#output
+enter number=5
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+==============================================================================================================================
+#2
+
+n=int(input("enter number="))
+dict={}
+for k in range(1,n+1):
+    dict[k]=k**3
+print(dict)
+
+#output
+enter number=5
+{1: 1, 2: 8, 3: 27, 4: 64, 5: 125}
+
+==============================================================================================================================
+#3
+
+dict1={'a':1,'b':2,'c':3}
+dict2={'d':4,'e':5,'f':6}
+dict1.update(dict2)
+print(dict1)
+
+#output
+{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6}
+==============================================================================================================================
+#5
+dict={'a':1,'b':10,'c':'python','d':'A','e':4,'f':125}
+p=dict.setdefault('b')
+print("default",p)
+print(dict.values())
+
+#output
+default 10
+dict_values([1, 10, 'python', 'A', 4, 125])
+==============================================================================================================================
+
+#5
+dict={'a':1,'b':2,'c':3}
+print(dict.values())
+
+#output
+dict_values([1, 2, 3])
+>>> 
+==============================================================================================================================
+#6
+dict={'a':1,'b':2,'c':3}
+key=input("enter key:")
+
+if key in dict.keys():
+    print(dict.values())
+else:
+    dict.update({'d':4})
+    print(dict)
+
+#output
+enter key:f
+{'a': 1, 'b': 2, 'c': 3, 'd': 4}    
+==============================================================================================================================
+#7
+dict={'a':1,'b':2,'c':3}
+print(sorted(dict.values()))
+
+#output
+[1, 2, 3]
+==============================================================================================================================
+#8
+dict={'a':1,'b':2,'c':3}
+print(sum(dict.values()))
+
+#output
+6
+==============================================================================================================================
+Post Laboratory Questions:-
+
+1.Define Dictionary.
+-> A dictionary is a collection which is unordered, changeable and indexed.
+
+2.Difference between Set and Dictionary.
+->Dictionaries and sets are almost identical
+  except that sets do not actually contain values.
+
+3.Give example of three methods of dictionary
+->Dict.pop(2)
+  print(Dict)
+
+  Dict.popitem()
+  print(Dict)
+
+  Dict.clear()
+  print(Dict)
+
+4.Write a Python script to add a key and value to existing dictionary.
+->class my_dictionary(dict):  
+    def __init__(self): 
+        self = dict() 
+    def add(self, key, value): 
+        self[key] = value 
+  dict_obj = my_dictionary() 
+  dict_obj.add(1, 'Raj') 
+  dict_obj.add(2, 'Zalavadiya')   
+  print(dict_obj)
+
+5.Write down the use of fromkeys() method.
+->fromkeys() method returns a new dictionary with the given sequence of 
+  elements as the keys of the dictionary. If the value argument is set,
+  each element of the newly created dictionary is set to the provided value.
+
+6.How to assign multiple values to a Key. Write down code for it
+->seq = ('name', 'age', 'gender')
+  dict = dict.fromkeys(seq)
+  print ("New Dictionary :",str(dict))
+
+  dict = dict.fromkeys(seq, 10)
+  print ("New Dictionary :",str(dict))
+
+  a={"num":"1"}
+  a["num"] = [1, 2, "abc"]
+  print (a)
+  dict = {"num": (1, 2, 3)}
+  print (dict["num"][0])
+  print (dict["num"][1])
+  print (dict["num"][2])
+

@@ -1,0 +1,89 @@
+#1
+
+set1 = {10, 20, 30}
+set2 = {20, 40, 50}
+
+set1.difference_update(set2)
+print(set1)
+
+#Output:-
+{10, 30}
+==============================================================================================================================
+#2
+
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+
+print(set1.intersection(set2))
+
+#Output:-
+{40, 50, 30}
+==============================================================================================================================
+#3
+
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+
+print(set1.union(set2))
+
+#Output:-
+{70, 40, 10, 50, 20, 60, 30}
+
+==============================================================================================================================
+#4
+set1 = {10, 20, 30, 40, 50}
+set1.difference_update({10, 20, 30})
+print(set1)
+
+#Output:-
+{40, 50}
+
+==============================================================================================================================
+#5
+
+set1 = {10, 20, 30, 40, 50}
+set2 = {60, 70, 80, 90, 10}
+
+if set1.isdisjoint(set2):
+  print("Two sets have no items in common")
+else:
+  print("Two sets have items in common")
+  print(set1.intersection(set2))
+
+#Output:-
+Two sets have items in common
+{10}
+
+==============================================================================================================================
+#6
+
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+
+set1.intersection_update(set2)
+print(set1)
+
+#Output:-
+{40, 50, 30}
+
+==============================================================================================================================
+Post Laboratory Questions:-
+
+1.What is Set?
+->A Set is an unordered collection data type that is iterable,
+  mutable and has no duplicate elements.
+  Python’s set class represents the mathematical notion of a set.
+
+2.Write down at least two advantages of Set.
+->The major advantage of using a set, as opposed to a list,
+  is that it has a highly optimized method for checking whether
+  a specific element is contained in the set.
+ 
+3.In Set, Intersection performed by which operator?
+->using & operator, performed intersection.
+
+4.Symmetric difference is performed using ________operator.
+->using - operator perform symmetric difference.
+
+5.Union is performed using______operator.
+->using | operator performed union.

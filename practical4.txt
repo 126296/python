@@ -1,0 +1,171 @@
+#1
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+
+new_list = []
+for i in a: 
+    if i<5: 
+    	print(i)
+
+#Output:-
+1
+1
+2
+3
+==============================================================================================================================
+#2
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c = []
+for i in a:
+    if i in b and i not in c:
+        c.append([i])
+print(c)
+
+#Output:-
+[[1], [1], [2], [3], [5], [8], [13]]
+==============================================================================================================================
+#3
+
+test_list = [5, 10, 15, 20, 25] 
+print ("The original list is : " +  str(test_list))  
+res = [ test_list[0], test_list[-1] ]  
+print ("The first and last element of list are : " +  str(res))
+
+#Output:-
+The original list is : [5, 10, 15, 20, 25]
+The first and last element of list are : [5, 25]
+
+==============================================================================================================================
+#4
+
+l=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 1]
+
+#Print the elements of the list
+print(str(l),"\n")
+
+'''
+#Print only even numbers from the list.
+for i in l:
+   if i % 2 == 0:
+      print(i, end = " ")
+print("\n")
+'''
+
+'''
+#Remove all occurrences a given element from the list.
+while 1 in l: l.remove(1)
+print(l)
+'''
+
+'''
+#Remove duplicate elements from the list.
+l = list(dict.fromkeys(l))
+print(l)
+'''
+
+#Add an element at specified index in a list.
+l.insert(4, 20)  
+print(l)
+
+#To sort the elements of given list in Ascending and Descending Order.
+
+l.sort()
+print("Ascendin Order : "+str(l))
+l.sort(reverse=True)
+print("Desending Order : "+str(l))
+
+#Output:-
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 1] 
+
+2 4 6 8 10 
+
+[2, 3, 4, 5, 6, 7, 8, 9, 10]
+[2, 3, 4, 5, 6, 7, 8, 9, 10]
+[2, 3, 4, 5, 20, 6, 7, 8, 9, 10]
+Ascendin Order : [2, 3, 4, 5, 6, 7, 8, 9, 10, 20]
+Desending Order : [20, 10, 9, 8, 7, 6, 5, 4, 3, 2]
+
+==============================================================================================================================
+#5
+
+
+l1=["a","b","c","d"]
+l2=["e","d","c","j","s"]
+"""
+difference1=[]
+difference2=[]
+for item in l1:
+    if item not in l2:
+        difference1.append(item)
+        print(difference1)
+for item in l2:
+    if item not in l1:
+        difference2.append(item)
+        print(difference2)"""
+
+
+set_diff1=set(l1)-set(l2)
+set_diff2=set(l2)-set(l1)
+list_diff1=list(set_diff1)
+list_diff2=list(set_diff2)
+print(list_diff1)
+print(list_diff2)
+
+#output:-
+['a', 'b']
+['j', 's', 'e']
+==============================================================================================================================
+#6
+
+l1=[100,200,'d','b']
+#append float literal
+l1.append(4.5)
+#Remove literal
+l1.remove(200)
+print(l1)
+
+
+#output:-
+[100, 'd', 'b', 4.5]
+==============================================================================================================================
+Post Laboratory Questions:-
+
+1.Explain list with proper example.
+->List is a collection which is ordered and changeable.
+  EX.:-l=[1,2,3,4,5]
+
+2.List out all the Methods List.
+->append(), clear(), copy(), count(), extend(), index(), insert(), pop(), remove(),
+  reverse(), sort().
+
+3.Which are the List Functions?
+->len(), list(), max(), min(), range().
+
+4.What is the difference between Del, Remove, Clear and Pop method?
+->del and pop removes the element at a specific index.
+  Remove basically removes the first matching value.
+  Delete deletes the item from a specific index Pop basically takes
+  an index and returns the value at that index.
+
+5.How to compare two list? Write down syntax.
+->1. Python reduce() and map() functions
+  2. Python collection.counter() method
+  3. Python sort() method and == operator to compare lists
+  4. Python set() method and == operator to compare two lists
+  5. Python Custom List Comprehension to Compare Two Lists
+
+6.How to create nested list? Write down code for it.
+->A nested list is created by placing a comma-separated sequence of sublists.
+  code:-L = ['a', ['bb', ['ccc', 'ddd'], 'ee', 'ff'], 'g', 'h']
+
+7.Which function will use for multiplication of two list?  Explain with example.
+->zip() function use for multiplication of two list.
+  code:-list1 = [1, 2, 3]
+        list2 = [4, 5, 6]
+        products = []
+        initialize result list
+        for num1, num2 in zip(list1, list2):
+	       products.append(num1 * num2)
+        print(products)
