@@ -1,0 +1,216 @@
+#1
+
+num=int(input("Enter number="))
+def demo(num):  
+    print(chr(num))
+    
+demo(num)
+
+#output
+Enter number=65
+A
+==============================================================================================================================
+#2
+
+kg=int(input("enter kilogram="))
+
+def con(kg):
+    
+    gram=1000*kg
+    print("gram =",gram)
+con(kg)
+
+#output
+enter kilogram=10
+gram = 10000
+
+==============================================================================================================================
+#3
+
+l1=[]
+k=1
+m=0
+
+for i in range(10):
+    l2=int(input("enter numbber="))
+    l1.append(l2)
+for i in l1:
+    if(i%2!=0):
+        if(i>m):
+            m=i
+            k=1
+    
+        
+if(k==1):
+        print("largest odd number is =",m)
+else:
+        print("odd number is not present")
+
+
+#output
+
+enter numbber=4
+enter numbber=6
+enter numbber=7
+enter numbber=8
+enter numbber=9
+enter numbber=10
+enter numbber=34
+enter numbber=56
+enter numbber=45
+enter numbber=12
+largest odd number is = 45
+
+===============================================================================================================================
+#4
+
+def data(var):
+    total=1
+    for i in var:
+        total*=i
+    return total
+print(data((10,20,30,40)))
+
+#Output
+240000
+
+==============================================================================================================================
+#5
+
+def fact(n):
+
+    if n==1:
+        return n
+    else:
+        return n*fact(n-1)
+
+num=int(input("enter number="))
+
+if num<0:
+    print("number is nagative")
+elif num==0:
+    print("factorial 0 is 1")
+else:
+    print(fact(num))
+
+#OutPut
+
+enter number=5
+120
+
+===============================================================================================================================
+#6
+
+def add(x,y):
+    return x+y
+
+def subtract(x,y):
+    return x-y
+
+def multi(x,y):
+    return x*y
+
+def divide(x,y):
+    return x/y
+
+print("select operation for calculate")
+print("1.add")
+print("2.subtract")
+print("3.multi")
+print("4.divide")
+
+while True:
+    ch = input("enter choice(1/2/3/4):")
+    
+    if ch in ('1','2','3','4'):
+        
+        n1=float(input("enter n1="))
+        n2=float(input("enter n2="))
+
+        if ch=='1':
+            print(add(n1,n2))
+        elif ch=='2':
+            print(subtract(n1,n2))
+        elif ch=='3':
+            print(multi(n1,n2))
+        elif ch=='4':
+            print(divide(n1,n2))
+        else:
+            exit
+    else:
+        break
+
+
+#output
+select operation for calculate
+1.add
+2.subtract
+3.multi
+4.divide
+enter choice(1/2/3/4):1
+enter n1=3
+enter n2=4
+7.0
+enter choice(1/2/3/4):5
+
+    
+===============================================================================================================================
+#7
+
+num=int(input("enter number="))
+
+def primenum(num):
+
+    if(num==1):
+        print("Not prime number")
+    elif(num==2):
+        print("prime number")
+    else:
+        for x in range(2,num):
+            if(num%x==0):
+                print("Not prime number")
+        print("prime number")
+primenum(num)
+
+
+#Output
+enter number=3
+prime number
+
+==============================================================================================================================
+
+
+#8
+
+def square():
+    l1=list()
+    for i in range(1,21):
+        l1.append(i**2)
+    print(l1)
+square()
+
+#Output
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400]
+
+
+===============================================================================================================================
+Post Laboratory Questions:-
+
+1.What is function?
+->A function is a block of organized, reusable code that is used to perform a single, related action.
+
+2.What is Recursive function?
+->Recursion is a common mathematical and programming concept. It means that a function calls itself.
+
+3.Python function always returns a value.
+->It always return None.
+
+4.What is the default return value for a function that does not return any value explicitly?
+->None
+
+5.Which of the keyword will use for the beginning of the function block?
+->def keyword is used for beginning of the function block.
+
+
+
+

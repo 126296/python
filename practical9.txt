@@ -1,0 +1,191 @@
+#1 
+
+from array import *
+"""
+arr=array('i',[11,20,38,49,50])
+
+for i in arr:
+    print(i)
+"""
+import array as arr
+a=arr.array('i',[])
+n=int(input("enter range="))
+
+for i in range(n):
+    val=int(input("enter number:"))
+    a.append(val)
+print(a)
+
+i=int(input("Enter index and Access individual element="))
+
+if(i==0):
+    b=a[0]
+
+elif(i==1):
+    b=a[1]
+elif(i==2):
+    b=a[2]
+   
+elif(i==3):
+    b=a[3]
+
+elif(i==4):
+    b=a[4]
+
+else:
+    exit
+print(b)
+
+#output
+enter range=5
+enter number:23
+enter number:45
+enter number:2
+enter number:67
+enter number:89
+array('i', [23, 45, 2, 67, 89])
+Enter index and Access individual element=2
+2
+
+==============================================================================================================================
+#2
+
+from array import *
+
+arr = array('i',[10,20,30,40,50])
+arr.reverse()
+#print(arr.reverse())
+
+for i in arr:
+    print(i)
+
+#output
+50
+40
+30
+20
+10
+
+==============================================================================================================================
+#3
+
+from array import *
+a=array('d',[])
+n=int(input("enter range of array:"))
+for i in range(n):
+    val=float(input("enter float number:"))
+    a.append(val)
+print(a)
+
+#output
+enter range of array:5
+enter float number:3
+enter float number:4
+enter float number:9
+enter float number:7
+enter float number:8
+array('d', [3.0, 4.0, 9.0, 7.0, 8.0])
+
+==============================================================================================================================
+
+#4
+
+from array import *
+import array as arr
+s=arr.array('i',[11,20,38,49,50])
+
+#1.add two element 3rd and 6th position
+s.insert(2,14)
+s.insert(5,19)
+print(s)
+#Append element
+s.append(45)
+print(s)
+#length of an array
+print("lenngth=",len(s))
+#Display All element 
+for i in range(0,len(s)):
+    print(s[i])
+
+#Output
+array('i', [11, 20, 14, 38, 49, 19, 50])
+array('i', [11, 20, 14, 38, 49, 19, 50, 45])
+lenngth= 8
+11
+20
+14
+38
+49
+19
+50
+45
+
+==============================================================================================================================
+#5
+
+from array import *
+a=array('i',[])
+n=int(input("Enter range:"))
+
+for i in range(n):
+    val=int(input("enter num:"))
+    a.append(val)
+print(a)
+
+a.insert(1,10)
+print(a)
+
+#Output
+Enter range:5
+enter num:98
+enter num:67
+enter num:12
+enter num:34
+enter num:56
+array('i', [98, 67, 12, 34, 56])
+array('i', [98, 10, 67, 12, 34, 56])
+
+==============================================================================================================================
+#6
+
+from array import *
+a=array('i',[])
+n=int(input("Enter range:"))
+
+for i in range(n):
+    val=int(input("enter num:"))
+    a.append(val)
+print(a)
+
+n=int(input("Enter Index value = "))
+a.pop(n)
+print(a)
+
+#Output
+Enter range:5
+enter num:0
+enter num:2
+enter num:4
+enter num:78
+enter num:79
+array('i', [0, 2, 4, 78, 79])
+Enter Index value = 3
+array('i', [0, 2, 4, 79])
+==============================================================================================================================
+Post Laboratory Questions:-
+
+1.What is Array?
+->An array is a data structure that stores values of same data type.
+
+2.Write syntax for how to create integer array in python.
+->array1 = array('i', [10,20,30,40,50])
+
+3.How to know memory address and length of the array?
+->from array import *
+  array_num = array('i', [1, 3, 5, 7, 9])
+  print("Original array: "+str(array_num))
+  print("Current memory address and the length in elements of the buffer: "+str(array_num.buffer_info()))
+
+4.What is the use of typecode() function?
+->This function returns the data type by which array is initialised.
+
