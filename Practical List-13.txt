@@ -1,0 +1,181 @@
+﻿1.Write a Python program to read an entire text file.
+
+import os
+f=open("Text.txt",'r')
+print(f.mode)
+print(f.name)
+
+for i in f:
+    print(i)
+f.close()
+
+Output:-
+r
+Text.txt
+This is line 1
+
+This is line 2
+
+This is line 3
+
+This is line 4
+
+This is line 5
+
+==============================================================================================================================
+2.Write a Python program to read first n lines of a file.
+
+f=open('Text.txt','r')
+n=int(input("Enter number of lines you want to read:"))
+for i in range(1,n+1):
+    print(f.readline(),end="")
+
+Output:-
+Enter number of lines you want to read:1
+This is line 1
+
+===============================================================================================================================
+3.Write a Python program to append text to a file and display the text. 
+
+import os
+def file_read(fname):
+        with open(fname, "w") as myfile:
+                myfile.write("Python Exercises")
+        txt = open(fname)
+        print(txt.read())
+file_read('Text.txt')
+
+Output:-
+Python Exercises
+
+===============================================================================================================================
+4.Write a Python program that allows you to create a file on desktop called myFile.txt and
+  write on it the contents = 'Python is high level programming language'. 
+
+import os
+ 
+user = os.getlogin()
+file = open("C:/Users/" + user + "/Desktop/myFile.txt", 'w')
+s = 'Python is high level programming language'
+file.write(s)
+file.close()
+print("File will be created on desktop and content will be written in file")
+
+Output:-
+File will be created on desktop and content will be written in file
+
+===============================================================================================================================
+5.Write a python program that allowing you to create a directory in the desktop called “myDir”
+
+import os 
+
+user = os.getlogin()
+d = "C:/users/" + user + "/desktop/"
+os.mkdir(d + "myDir/")
+print("Directory will be created on desktop")
+
+Output:-
+Directory will be created on desktop
+
+===============================================================================================================================
+6.Write a Python program allowing you to create a file in the desktop named myFile.txt and
+  write it the following lines:
+  “Babu Madhav Institute of Information Technology
+  5 Years Integrated M.Sc. (IT)
+  Uka Tarsadia University”
+
+import os
+ 
+user = os.getlogin()
+file = open("C:/Users/" + user + "/Desktop/myFile.txt", 'w')
+s1 = 'Babu Madhav Institute of Information Technology\n'
+s2 = '5 Years Integrated M.Sc. (IT)\n'
+s3 = 'Uka Tarsadia University'
+file.write(s1)
+file.write(s2)
+file.write(s3)
+file.close()
+print("File will be created on desktop and content will be written in file")
+
+Output:-
+File will be created on desktop and content will be written in file
+
+===============================================================================================================================
+7.Write a Python program allowing you to moving “myFile.txt”from the directory “MyDir1” to“myDir2”.
+
+import shutil
+originalDir=input("Enter your path where your file is located:")
+file=input("Enter filename:")
+opath=originalDir + "\\" + file
+moveDir=input("Enter your path where you want to move yuor file:")
+npath=moveDir + "\\" + file
+shutil.move(opath,npath);
+print("\nFile Moved Successfully")
+
+Output:-
+Enter your path where your file is located (C:\Users\Your Name\Desktop) :C:\Users\Dell\Desktop\MyDir1
+Enter filename(MyFile.txt):myFile.txt
+Enter your path where you want to move yuor file (C:\Users\Your Name\Desktop\myDir) :C:\Users\Dell\Desktop\MyDir2
+
+File Moved Successfully
+
+===============================================================================================================================
+8.Write a program in Python which allows you to insert at the 3rd position of an existing file called
+  myFile.txt, the line "This line was inserted via Python code! " without changing the existing content file.
+
+file=input("Enter filename with extension=")
+f=open(file,"r")
+print("\nContent before append data")
+print(f.read())
+
+f=open(file,"r")
+contents=f.readlines()
+f.close()
+
+pos=int(input("Enter position you want to insert data:"))
+text=input("\nEnter data you want to insert:")
+text=text+"\n"
+contents.insert(pos-1,text)
+contents="".join(contents)
+
+f=open(file,"w")
+f.write(contents)
+
+print("\nContent after insert data")
+f=open(file,"r")
+print(f.read())
+===============================================================================================================================
+===============================================================================================================================
+
+Post laboratory Questions:-
+
+1.What is os.path module?
+->The os.path module is always the path module suitable for the operating
+   system Python is running on, and therefore usable for local paths.
+
+2.List out various file modes.
+->“ r “, for reading.
+  “ w “, for writing.
+  “ a “, for appending.
+  “ r+ “, for both reading and writing.
+
+3.List out various operations that can be perform on a file.
+->Create a new file
+  Change the access permissions and attributes of a file
+  Open a file, which makes the file contents available to the program
+  Read data from a file
+  Write data to a file
+  Delete a file
+  Close a file.
+
+4.What is the purpose of flush() method?
+->Python file method flush() flushes the internal buffer, like stdio's fflush.
+  Python automatically flushes the files when closing them.
+  But you may want to flush the data before closing any file.
+
+5.What is file object?
+->A file object allows us to use, access and manipulate all the user accessible files.
+
+6. What is the difference between ‘w’ and ‘r+’ mode?
+->r+ : Opens a file for reading and writing, placing the pointer at the beginning of the file.
+  w : Opens in write-only mode.

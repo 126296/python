@@ -1,0 +1,485 @@
+#1
+#from array import *
+class employee:
+    #a=array('d',[])
+    #a=[]
+
+    n=int(input("enter empoyee range="))
+    def data(n):
+        
+        for i in range(n):
+            empno=int(input("enter employee:"))
+    
+            empsal=float(input("enter salary:"))
+            #a.append("emplyee=",empno)
+            #a.append("emplysalary=",empsal)
+            print("empno=",empno,"empsalary=",empsal)
+
+    data(n)
+   
+    """def display(empno,empsal):
+        print(empno,empsal)
+    display(empno,empsal)"""    
+    
+#output
+enter empoyee range=2
+enter employee:1
+enter salary:300
+empno= 1 empsalary= 300.0
+enter employee:2
+enter salary:400
+empno= 2 empsalary= 400.0
+
+==================================================================
+#2
+
+"""#2
+class time:
+    def __init__(self,hours,minitus,seconds):
+        self.hours=hours
+        self.minitus=minitus
+        self.seconds=seconds
+    def __add__(self,other):
+        return self.hours+other.hours,self.minitus+other.minitus,self.seconds+other.seconds
+    def __show__(self):
+        return self.hours,self.minitus,self.seconds
+s1=time(1,2,5)
+s2=time(3,4,4)
+s3=s1+s2
+print(s3)"""
+
+
+class time:
+    hours=0
+    minutes=0
+    seconds=0
+    sumh=0
+    summ=0
+    sums=0
+    def __init__(this,h,m,s):
+        this.hours=h
+        this.minutes=m
+        this.seconds=s
+    def __add__(this,obj):
+        sumh=this.hours+obj.hours
+        summ=this.minutes+obj.minutes
+        sums=this.seconds+obj.seconds
+        while sums>=60 or summ>=60:
+            if(sums>=60):
+                summ=summ+1
+                sums=sums-60
+            if(summ>=60):
+                sumh=sumh+1
+                summ=summ-60
+                print(sumh,"hours,",summ,"minutes,",sums,"seconds")
+t1=time(int(input("enter hours:")),int(input("enter minutes:")),int(input("enter seconds:")))
+t2=time(int(input("enter hours:")),int(input("enter minutes:")),int(input("enter seconds:")))
+print(t1+t2)
+
+#output
+enter hours:4
+enter minutes:20
+enter seconds:500
+enter hours:3
+enter minutes:60
+enter seconds:90
+8 hours, 21 minutes, 530 seconds
+
+==================================================================
+#3
+class company:
+    def __init__(self,compnyname):
+        self.compnyname=compnyname
+    def __eq__(self,other):
+        if(self.compnyname==other.compnyname):
+            return True
+        else:
+            return False
+c1=company("amazon")
+c2=company("flipcart")
+if(c1==c2):
+    print("compny name is same")
+else:
+    print("compny name is not same")
+
+#output
+compny name is not same
+        
+==================================================================
+#4
+
+class FLOT:
+    number1=10.34
+    number2=20.68
+    #def __init__(self,n1,n2):
+
+     #   self.number1=n1
+     #   self.number2=n2
+   
+        
+    def getdata(self):
+        self.number1+=self.number2
+        self.number2-=self.number1
+        
+    def display(self):
+        print("number1="+str(self.number1))
+        print("number2="+str(self.number2))
+        
+    
+f1=FLOT()
+f1.getdata()
+f1.display()
+        
+        
+#output
+number1=31.02
+number2=-10.34
+
+==================================================================
+#5
+class con:
+    def __init__(self):
+        print("this is constructor")
+
+    def __del__(self):
+       print("this is destructor")
+c=con()
+del c
+
+#output
+this is constructor
+this is destructor
+
+        
+==================================================================
+#6
+class SHAPE:
+    
+    def circle(self):
+        r=float(input("enter r="))
+        area=(22*r*r)/7
+        print("area of circle is=",area)
+        
+    def square(self):
+        side=float(input("enter side:"))
+        area=side*side
+        print("area of square is:",area)
+
+    def rectangle(self):
+        a=float(input("enter a="))
+        b=float(input("enter b="))
+
+        area=a*b
+        print("area of rectangle is:",area)
+
+    def triangle(self):
+        a=float(input("enter a="))
+        b=float(input("enter b="))
+        c=float(input("enter c="))
+
+        s=(a+b+c)/2
+
+        area=(s*(s-a)*(s-b)*(s-c))**0.5
+
+        print("area of triangle is:",area)        
+
+s=SHAPE()
+s.circle()
+s.square()
+s.rectangle()
+s.triangle()
+
+#output
+enter r=3
+area of circle is= 28.285714285714285
+enter side:2
+area of square is: 4.0
+enter a=4
+enter b=3
+area of rectangle is: 12.0
+enter a=2
+enter b=3
+enter c=4
+area of triangle is: 2.9047375096555625
+==================================================================
+
+#7
+
+class Student:
+    def __init__(self):
+        self.__roll=0
+        self.__name=""
+        #self.__marks=[]
+        self.__java=0
+        self.__python=0
+        self.__cg=0
+        self.__dba=0
+        self.__mvc=0
+        self.__total=0
+        self.__per=0
+        self.__grade=""
+        self.__result=""
+        self.__sem=""
+        self.__course=""
+
+    def setStudent(self):
+        self.__roll=int(input("Enter Roll: "))
+        self.__name=input("Enter Name: ")
+        self.__course=input("Enter course: ")
+        self.__sem=int(input("Enter sem: "))
+        self.__java=int(input("Enter java marks: "))
+        self.__python=int(input("Enter python marks: "))
+        self.__cg=int(input("Enter cg marks: "))
+        self.__dba=int(input("Enter dba marks: "))
+        self.__mvc=int(input("Enter mvc marks: "))
+
+        
+        
+        #print("Enter marks of 5 subjects: ")
+        #for i in range(5):
+            #self.__marks.append(int(input("Subject "+str(i+1)+": ")))
+			
+    def calculateTotal(self):
+        #for x in self.__marks:
+            #self.__total
+        self.__total=self.__java+self.__python+self.__cg+self.__dba+self.__mvc
+			
+    def calculatePercentage(self):
+        self.__per=self.__total/5
+		
+    def calculateGrade(self):
+        if self.__per>=85:
+            self.__grade="S"
+        elif self.__per>=75:
+            self.__grade="A"
+        elif self.__per>=65:
+            self.__grade="B"
+        elif self.__per>=55:
+            self.__grade="C"
+        elif self.__per>=50:
+            self.__grade="D"
+        else:
+            self.__grade="F"
+		    			
+    def showStudent(self):
+        self.calculateTotal()
+        self.calculatePercentage()
+        self.calculateGrade()
+        
+        print("enrollment number is:",self.__roll,"\t\t","name is:",self.__name,"\t\t","total:",self.__total,"\t\t","course:",self.__course,"\t\t","sem:",self.__sem,"\t\t","per:",self.__per,"\t\t","grade:",self.__grade)
+
+
+    
+s=Student()
+s.setStudent()
+s.showStudent()
+
+#output
+Enter Roll: 066
+Enter Name: smit donga
+Enter course: mscit
+Enter sem: 5
+Enter java marks: 90
+Enter python marks: 80
+Enter cg marks: 80
+Enter dba marks: 80
+Enter mvc marks: 70
+enrollment number is: 66 		 name is: smit donga 		 total: 400 		 course: mscit 		 sem: 5 		 per: 80.0 		 grade: A
+
+==================================================================
+#8
+
+#yes object of the derived class access the basefun().
+
+class base:
+    def basefun(self):
+        print("base class method")
+class chield(base):
+    def show(self):
+        print("chield class method")
+c=chield()
+c.basefun()
+#c.chield()
+
+#output
+base class method
+        
+        
+==================================================================
+
+#9
+
+class person:
+    def __init__(self):
+        self.name=""
+        self.gender=""
+        self.age=0
+        
+    
+
+    def getpersondetails(self):
+        self.name=input("enter name=")
+        self.gender=input("enter gender=")
+        self.age=int(input("enter age="))
+
+    def showpersondetails(self):
+        print("name:",self.name)
+        print("gender:",self.gender)
+        print("age:",self.age)
+        
+        
+        
+class employee(person):
+    def __init__(self):
+        self.companyname=""
+        self.salary=0
+
+    def getempdetails(self):
+        self.companyname=input("enter companyname=")
+        self.salary=int(input("enter salary="))
+
+    def showempdetails(self):
+        print("companyname:",self.companyname)
+        print("salary:",self.salary)
+        
+
+class typist(employee):
+    def __init__(self):
+        self.typing_speed=""
+    
+    def getdata(self):
+        self.typing_speed=input("enter typing speed=")
+
+    def display(self):
+        print("typing speed:",self.typing_speed)
+
+t=typist()
+t.getpersondetails()
+t.showpersondetails()
+t.getempdetails()
+t.showempdetails()
+t.getdata()
+t.display()
+
+#Multilevel inheritance used in this program
+
+#output
+
+enter name=smit
+enter gender=male
+enter age=19
+name: smit
+gender: male
+age: 19
+enter companyname=google
+enter salary=1500000
+companyname: google
+salary: 1500000
+enter typing speed=500mph
+typing speed: 500mph
+        
+==================================================================
+
+#10
+
+class collagecourse:
+    
+    def __init__(self):
+        self.department=""
+        self.coursenumber=0
+        self.credithours=0
+        self.tution=0
+
+    def data(self):
+        self.department=input("enter department name=")
+        self.coursenumber=int(input("enter coursenumber="))
+        self.credithours=int(input("enter credithours="))
+        self.tution=float(input("enter tution fees="))
+
+    def display(self):
+        print("department:",self.department)
+        print("coursenumber:",self.coursenumber)
+        print("credithours:",self.credithours)
+        print("tution:",self.tution)
+
+class labcourse(collagecourse):
+
+    def __init__(self):
+        #self.lebfee=0
+        self.totalfee=0
+        self.tution=0
+
+    def data(self):
+        collagecourse.data(self)
+        self.labfee=float(input("enter lab fee="))
+        
+        print("================================================================")  
+
+    def display(self):
+        
+        collagecourse.display(self)
+        self.totalfee=self.tution+self.labfee
+        print("total fees:",self.totalfee)
+l=labcourse()
+l.data()
+l.display()
+
+#output
+enter department name=BMIIT
+enter coursenumber=201
+enter credithours=4
+enter tution fees=500.90
+enter lab fee=400.90
+================================================================
+department: BMIIT
+coursenumber: 201
+credithours: 4
+tution: 500.9
+total fees: 901.8
+
+
+============================================================================
+
+->Post Laboratory Questions:-
+
+1.How to specify private member and method in class?
+->Using double underscore'__' in prefix we can define private method
+->Using double underscore'__' in prefix of member name.
+
+2.How to access super class method?
+->Parent’s class methods can be called by using the Parent classname.method inside the overridden method.
+
+3.What is the purpose of __init__ () and __del__() function?
+->__init__():-Use the __init__() function to assign values to object properties,
+              or other operations that are necessary to do when the object is being created.
+->__del__():-It is called when an object is garbage collected which happens after all
+             references to the object have been deleted.
+
+4.How to derive child class from base class in python? Write down code for it.
+->class A: 
+      def __init__(self, n = 'Rahul'): 
+              self.name = n 
+  class B(A): 
+      def __init__(self, roll): 
+              self.roll = roll   
+  object = B(23) 
+  print (object.name) 
+
+5.Explain below in-build methods with example:
+  •__add__()
+  •__truediv__()
+  •__eq__()
+  •__gt__()
+  •__iadd__()
+
+->__add__():-Which means that we can control the result of a sum of two objects by modifying
+             or defying the __add__ method.
+->__trueediv__():-The __truediv__() method is used when __future__. division is in effect, otherwise __div__() is used.
+->__eq__():-Equality in Python is more complicated than most people realize but at its core you have to implement
+            a __eq__(self, other) method. It should return either a boolean value if your class knows how to compare
+            itself to other or NotImplemented if it doesn't.
+->__gt__():-Each takes the same two arguments as cmp, and must return either a result value (typically Boolean),
+            raise an exception, or return NotImplemented to signal the operation is not defined.
+->__iadd__():-Python assigns the return value of your __iadd__ implementation to the object you're
+              "adding to", AFTER the implementation completes.
+

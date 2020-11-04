@@ -1,0 +1,219 @@
+#1
+
+
+import re
+
+
+if re.match(r'\w+',input("input string:")):
+        print("string is vallid")
+else:
+        print("string is not vallid")
+
+#Output
+input string:%^%^%^
+string is not vallid
+>>> 
+===================== RESTART: C:\Users\Hp\Desktop\1.py =====================
+input string:smit donga
+string is vallid
+
+===============================================================
+#2
+
+import re
+
+name=input("Enter String: ")
+
+patterns='i{3}'
+
+if(re.search(patterns,name)):
+    print("String matched")
+else:
+    print("String is Not Matched")
+
+#output
+Enter String: smit
+String is Not Matched
+>>> 
+===================== RESTART: C:\Users\Hp\Desktop\2.py =====================
+Enter String: asiiii
+String matched
+=================================================================
+
+#3
+
+import re
+
+pattern='^\w+'
+name=input("Enter String:")
+if re.search(pattern,name):
+    print("Matched")
+else:
+    print("Not Matched")
+
+#output
+Enter String:@smit
+Not Matched
+
+===================================================================
+#4
+import re
+
+name=input("Enter string:")
+def firstword(name):
+
+    str=name.split()[0]
+    return str
+print(firstword(name))
+    
+#output
+Enter string:smit donga
+smit
+
+
+==================================================================
+#5
+str1=input("input string:")
+
+str2=str1.split("*")
+
+print(str2)
+
+#output
+input string:smit donga
+['smit donga']
+
+
+===================================================================
+#6
+import re
+
+str1=input("Enter string:")
+
+str2=re.findall(r'\w+$',str1)
+
+print(str2)
+
+#output
+Enter string:smit donga
+['donga']
+
+===================================================================
+#7
+
+import re
+
+str1=input("Enter string:")
+
+str2=re.findall(r'\w\w',str1)
+
+print(str2)
+
+#output
+Enter string:smit donga
+['sm', 'it', 'do', 'ng']
+
+=====================================================================
+#8
+
+import re
+
+str1=input("Enter string:")
+
+str2=re.findall(r'\b\w\w',str1)
+
+print(str2)
+
+#output
+Enter string:smit donga
+['sm', 'do']
+
+======================================================================
+#9
+
+import re
+
+email=input("Enter Email:")
+
+result=re.findall(r'\S\w+@\S\w+.\S\w+',email)
+print(result)
+
+#output
+Enter Email:smitdonga@gmail. com
+['smitdonga@gmail']
+>>> 
+===================== RESTART: C:\Users\Hp\Desktop\9.py =====================
+Enter Email:smitdonga@gmail.com
+['smitdonga@gmail.com']
+
+=======================================================================
+#10
+import re
+str=re.findall(r'\d{2}-\d{2}-\d{4}','smit donga,12-06-2001')
+print("date:",str)
+
+
+#output
+date: ['12-06-2001']
+=======================================================================
+
+#11
+import re
+
+str=re.findall(r'\b[AEIOUaeiou]\w+','i am smit')
+print("start with vovels:",str)
+
+#output
+vovels is: ['am']
+========================================================================
+
+#12
+import re
+
+if re.match(r"\d{10}$",input("enter mobile number:")):
+            print("number is vallid")
+else:
+            print("number is not vallid")
+
+#output
+enter mobile number:4758586868
+number is vallid
+>>> 
+===================== RESTART: C:\Users\Hp\Desktop\12.py =====================
+enter mobile number:90890890789
+number is not vallid
+>>> 
+=======================================================================
+#13
+import re
+
+str='smit;donga,rajeshbhai'
+str=re.split(r'[;,\s]',str)
+print("split:",str)
+
+#output
+split: ['smit', 'donga', 'rajeshbhai']
+==========================================================================
+
+#Post Laboratory Questions:-
+
+1.List out the method associated with regular expression
+->findal(), search(), split(), sub().
+
+2.When we should use RE functionality?
+->A regular expression (or RE) specifies a set of strings that matches it;
+  the functions in this module let you check if a particular string matches
+  a given regular expression.
+ 
+3.Explain match() versus search() in python.
+  Which method is used for replacing the string using regular expression?
+->match checks for a match only at the beginning of the string,
+  while search checks for a match anywhere in the string.
+->replacing method is used for replacing the string using regular expression.
+
+4.How to find the digit from the given string? 
+->Use to isdigit() to check if a string contains a number.
+
+5.List out the metacharacters used in RE module.
+->[], \, ., ^, $, *, +, {}, |, ()
+
